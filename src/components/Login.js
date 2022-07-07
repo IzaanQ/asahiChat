@@ -11,6 +11,7 @@ const Login = () => {
             <h2>Welcome to asahiChat</h2>
             <div
                 className="login-button google"
+                onClick={() => auth.signInWithRedirect(new firebase.auth.GoogleAuthProvider())}
             >
                 <GoogleOutlined /> Sign In with Google
             </div>
@@ -19,6 +20,7 @@ const Login = () => {
 
             <div
                 className="login-button facebook"
+                onClick={() => auth.signInWithRedirect(new firebase.auth.FacebookAuthProvider())}
             >
                 <FacebookOutlined /> Sign In with Facebook
             </div>
